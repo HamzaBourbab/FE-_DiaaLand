@@ -1,0 +1,142 @@
+
+@import '@/app/globals.scss';
+// Colors
+$primary: rgb(108, 162, 209);
+$secondary: #000000;
+$gray: #9E9E9E;
+
+// General Styles
+.container {
+   display: grid;
+   grid-template-columns: repeat(3, minmax(100px, 1fr));
+   grid-template-rows: repeat(1, minmax(100px, 1fr));
+   grid-gap: 20px;
+   justify-content: center;
+   align-items: center;
+   
+}
+.info-side {
+   grid-area:2/1/2/2 ;
+   .info{
+      letter-spacing: 4px;
+      h1{
+         font-size: 40px !important;
+      }
+   }
+}
+.from-description{
+   grid-area:2/2/3/4 ;
+   // margin: 50px;
+   padding: 40px;
+   height: 630px !important;
+   width: 950px !important;
+   box-shadow: 0 0 1rem rgba(0, 0, 0, .2);
+   border-radius: 1rem 1rem 0 0;
+   height: fit-content;
+
+}
+.options {
+   display: flex;
+   gap: 3pxpx;
+   
+   input {
+      display: inline-block;
+      vertical-align: middle;
+      height: 30px;
+   }
+   label{
+      display: inline-block;
+      vertical-align: middle;
+      width: 600px;
+   }
+}
+select{
+   width:600px;
+   height: 30px;
+}
+.salary{
+   display: flex;
+   gap: 3px;
+   label{   
+      display: inline-block;
+      vertical-align: middle;
+      width: 600px;
+      
+      
+   }
+   input{
+      display: inline-block;
+      vertical-align: middle;
+      height: 30px;
+      
+   }
+}
+textarea{
+   max-height: 100px;
+}
+.job-date{
+   display: flex;
+   gap: 3px;
+   label{   
+      display: inline-block;
+      vertical-align: middle;
+      width: 600px;
+      
+      
+   }
+   input{
+      display: inline-block;
+      vertical-align: middle;
+      height: 30px;
+      
+   }
+}
+h1 {
+ 
+ color: $primary;
+ margin-bottom: 1rem;
+
+}
+
+p {
+ font-size: 1.2rem;
+ margin-bottom: 2rem;
+}
+
+label {
+ font-size: 1.2rem;
+ margin-bottom: 0.5rem;
+}
+
+input, textarea, select {
+ width: 100%;
+ padding: 0.5rem;
+ margin-bottom: 1rem !important;
+ box-sizing: border-box;
+ border: 1px solid $gray;
+ border-radius: 4px;
+ outline: none;
+ font-size: 1.2rem;
+ color: $secondary;
+}
+
+textarea {
+ resize: none;
+ height: 100px;
+}
+
+button {
+ width: 50%;
+ margin-left: 25%  !important;
+ background-color: $primary;
+ color: #ffffff;
+ font-size: 1.2rem;
+ border: none;
+ border-radius: 4px;
+ cursor: pointer;
+ transition: background-color 0.3s;
+
+ &:hover {
+    background-color: darken($primary, 10%);
+ }
+}
